@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="矩阵,坐标变换," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="愚昧学习志">
-<meta property="og:url" content="http://yoursite.com/categories/站务/index.html">
+<meta name="description" content="&amp;emsp;&amp;emsp;我们考虑将空间直角坐标系中的一点$\,P_1(x_1,y_1,z_1)\,$绕直线$\,l\colon\dfrac xa=\dfrac yb=\dfrac zc\,$逆时针（观察视角使得向量$\,(a,b,c)\,$指向观察者的眼睛，下同）旋转$\,\theta\,$角，得到的点记为$\,P_2(x_2,y_2,z_2)$，然后尝试找出这两点坐标的关系． &amp;emsp;&amp;em">
+<meta name="keywords" content="矩阵,坐标变换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="空间中的坐标变换">
+<meta property="og:url" content="http://yoursite.com/2018/08/18/coordinate-transformation-in-space/index.html">
 <meta property="og:site_name" content="愚昧学习志">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;我们考虑将空间直角坐标系中的一点$\,P_1(x_1,y_1,z_1)\,$绕直线$\,l\colon\dfrac xa=\dfrac yb=\dfrac zc\,$逆时针（观察视角使得向量$\,(a,b,c)\,$指向观察者的眼睛，下同）旋转$\,\theta\,$角，得到的点记为$\,P_2(x_2,y_2,z_2)$，然后尝试找出这两点坐标的关系． &amp;emsp;&amp;em">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-18T01:53:10.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="愚昧学习志">
+<meta name="twitter:title" content="空间中的坐标变换">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;我们考虑将空间直角坐标系中的一点$\,P_1(x_1,y_1,z_1)\,$绕直线$\,l\colon\dfrac xa=\dfrac yb=\dfrac zc\,$逆时针（观察视角使得向量$\,(a,b,c)\,$指向观察者的眼睛，下同）旋转$\,\theta\,$角，得到的点记为$\,P_2(x_2,y_2,z_2)$，然后尝试找出这两点坐标的关系． &amp;emsp;&amp;em">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/站务/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/18/coordinate-transformation-in-space/"/>
 
 
 
 
 
-  <title>分类: 站务 | 愚昧学习志</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>空间中的坐标变换 | 愚昧学习志</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,55 +249,208 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>站务<small>分类</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/18/coordinate-transformation-in-space/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虞昧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="愚昧学习志">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/17/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">空间中的坐标变换</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T16:27:16+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-18T09:36:23+08:00">
+                2018-08-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/解析几何/" itemprop="url" rel="index">
+                    <span itemprop="name">解析几何</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;我们考虑将空间直角坐标系中的一点$\,P_1(x_1,y_1,z_1)\,$绕直线$\,l\colon\dfrac xa=\dfrac yb=\dfrac zc\,$逆时针（观察视角使得向量$\,(a,b,c)\,$指向观察者的眼睛，下同）旋转$\,\theta\,$角，得到的点记为$\,P_2(x_2,y_2,z_2)$，然后尝试找出这两点坐标的关系．</p>
+<p>&emsp;&emsp;首先，我们熟知平面中的一点绕原点<strong>逆时针</strong>旋转$\,\theta\,$角坐标变换公式为<br>$$\begin{pmatrix}x’\\y’\end{pmatrix}=<br>\begin{pmatrix}\cos\theta&amp;-\sin\theta\\ \sin\theta&amp;\cos\theta\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.$$借此，我们可以很快地得出空间中一点绕某条坐标轴转的公式，因为绕坐标轴旋转时有一个坐标分量是不变的，相当于二维时的情形．而对于任意的旋转轴，我们可以尝试通过旋转坐标系，使得直线$\,l\,$成为$\,z\,$轴，然后就变为一点绕$\,z\,$轴旋转的问题了，之后再将坐标系旋转回来即可．<a id="more"></a></p>
+<p>&emsp;&emsp;为了使$\,l\,$成为$\,z\,$轴，我们可以这样：</p>
+<ol>
+<li>先以$\,z\,$轴为轴，旋转坐标系，使得向量$\,(a,b,c)\,$在$\,xOy\,$平面上的投影落在新的$\,x\,$轴上．</li>
+<li>再以新的$\,y\,$轴为轴，旋转新的坐标系，使得$\,l\,$与更新的$\,z\,$轴重合．</li>
+</ol>
+<p>我们记<br>$$\alpha=\arctan\dfrac ba,\beta=\arctan\dfrac{c}{\sqrt{a^2+b^2}},$$那么对于旧坐标系中的一点$\,(x,y,z)$，它的坐标就变为了<br>$$\begin{pmatrix}x’\\y’\\z’\end{pmatrix}=\begin{pmatrix}\cos\beta&amp;0&amp;\sin\beta\\0&amp;1&amp;0\\-\sin\beta&amp;0&amp;\cos\beta\end{pmatrix}<br>\begin{pmatrix}\cos\alpha&amp;\sin\alpha&amp;0\\-\sin\alpha&amp;\cos\alpha&amp;0\\0&amp;0&amp;1\end{pmatrix}<br>\begin{pmatrix}x\\y\\z\end{pmatrix}.$$要注意的是，这里的$\,\alpha\,$和$\,\beta\,$为正时表示的是坐标系逆时针转动，而点是<strong>顺时针</strong>转动的．再将新的点绕新的$\,z\,$轴逆时针旋转$\,\theta\,$角，坐标就变为了<br>$$\begin{pmatrix}x’’\\y’’\\z’’\end{pmatrix}=<br>\begin{pmatrix}\cos\theta&amp;\sin\theta&amp;0\\-\sin\theta&amp;\cos\theta&amp;0\\0&amp;0&amp;1\end{pmatrix}<br>\begin{pmatrix}x’\\y’\\z’\end{pmatrix}.$$最后，我们要将坐标系复原，这只需在新坐标的左侧乘上旋转坐标系时对应的矩阵的逆．注意到这些矩阵都是正交矩阵，于是逆就是转置，所以最终的坐标应为<br>$$\begin{pmatrix}x’’’\\y’’’\\z’’’\end{pmatrix}=<br>\begin{pmatrix}\cos\alpha&amp;-\sin\alpha&amp;0\\\sin\alpha&amp;\cos\alpha&amp;0\\0&amp;0&amp;1\end{pmatrix}<br>\begin{pmatrix}\cos\beta&amp;0&amp;-\sin\beta\\0&amp;1&amp;0\\\sin\beta&amp;0&amp;\cos\beta\end{pmatrix}<br>\begin{pmatrix}x’’\\y’’\\z’’\end{pmatrix}.$$为了使最终的结果更加美观，我们可以令<br>$$a^2+b^2+c^2=1,$$于是这五个矩阵的积就是<br>$$\boldsymbol R=\begin{pmatrix}<br>a^2 (1-\cos \theta)+\cos \theta &amp; a b (1-\cos \theta)-c \sin \theta &amp; a c (1-\cos \theta)+b \sin \theta \\<br>a b (1-\cos \theta)+c \sin \theta &amp; b^2 (1-\cos \theta)+\cos \theta &amp; b c (1-\cos \theta)-a \sin \theta \\<br>a c (1-\cos \theta)-b \sin \theta &amp; b c (1-\cos \theta)+a \sin \theta &amp; c^2 (1-\cos \theta)+\cos \theta<br>\end{pmatrix}.$$可以用 Mathematica 中的<code>RotationMatrix[]</code>来验证这一结果．</p>
+<p>&emsp;&emsp;所以，$P_1\,$和$\,P_2\,$间的坐标关系应为<br>$$\begin{pmatrix}x_2\\y_2\\z_2\end{pmatrix}=\boldsymbol R\begin{pmatrix}x_1\\y_1\\z_1\end{pmatrix}.$$更一般地，当点$\,P_1\,$绕直线$\,\dfrac {x-x_0}a=\dfrac {y-y_0}b=\dfrac {z-z_0}c\,$($a^2+b^2+c^2=1$)逆时针旋转$\,\theta\,$角后，坐标变为<br>$$\begin{pmatrix}x_2\\y_2\\z_2\end{pmatrix}=\boldsymbol R\begin{pmatrix}x_1-x_0\\y_1-y_0\\z_1-z_0\end{pmatrix}+\begin{pmatrix}x_0\\y_0\\z_0\end{pmatrix}.$$</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="虞昧 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="虞昧 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/矩阵/" rel="tag"># 矩阵</a>
+          
+            <a href="/tags/坐标变换/" rel="tag"># 坐标变换</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -300,6 +458,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -531,6 +693,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
