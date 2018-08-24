@@ -1221,6 +1221,7 @@ pre .javascript .function {
 }
 .post-body {
   font-family: '宋体', 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   .post-body {
@@ -1943,7 +1944,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #95bbff;
+  background: #fffa83;
 }
 .links-of-blogroll {
   font-size: 13px;
