@@ -118,6 +118,32 @@
   };
 </script>
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      processEscapes: true
+    },
+    TeX: {
+		equationNumbers: {autoNumber: ["AMS"], useLabelIds: true},
+		Macros: {
+			bm: '\\boldsymbol', 
+			px: '\\mathrel{/\\mkern-5mu/}'
+		}
+	},
+    "HTML-CSS": {linebreaks: {automatic: true}},
+    SVG: {linebreaks: {automatic: true}}
+});
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+	MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+		cancel: ["Extension","cancel"],
+		bcancel: ["Extension","cancel"],
+		xcancel: ["Extension","cancel"],
+		cancelto: ["Extension","cancel"]
+  });
+});
+</script>
 
 
   <link rel="canonical" href="http://nyuls.com/2018/08/25/Hermitian-identity/"/>
@@ -427,6 +453,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/08/26/handling-of-left-an-right-relations/" rel="prev" title="左右关系的处理">
+                左右关系的处理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -493,7 +523,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -515,7 +545,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
