@@ -81,7 +81,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="愚昧学习志">
-<meta property="og:url" content="http://nyuls.com/page/2/index.html">
+<meta property="og:url" content="http://nyuls.com/tags/三角函数/index.html">
 <meta property="og:site_name" content="愚昧学习志">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -141,13 +141,13 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 </script>
 
 
-  <link rel="canonical" href="http://nyuls.com/page/2/"/>
+  <link rel="canonical" href="http://nyuls.com/tags/三角函数/"/>
 
 
 
 
 
-  <title>愚昧学习志</title>
+  <title>标签: 三角函数 | 愚昧学习志</title>
   
 
 
@@ -176,8 +176,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-  page-home">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,454 +279,55 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
+
+  
+  
+  
+  <div class="post-block tag">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>三角函数<small>标签</small>
+        </h1>
+      </div>
+
       
-
-  
-
-  
-  
-  
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/08/19/semaphore-and-P-V-operation/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="虞昧">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="愚昧学习志">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h2 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/19/semaphore-and-P-V-operation/" itemprop="url">信号量和 P、V 操作</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+            <a class="post-title-link" href="/2018/09/08/geometrical-explanation-for-prosthaphaeresis/" itemprop="url">
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="name">和差化积的图形解释</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-19T08:48:01+08:00">
-                2018-08-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机基础/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="信号量和-P、V-操作的概念"><a href="#信号量和-P、V-操作的概念" class="headerlink" title="信号量和 P、V 操作的概念"></a>信号量和 P、V 操作的概念</h1><p>&emsp;&emsp;信号量是一种卓有成效的进程同步机制，它由荷兰学者 Dijkstra 于 1965 年提出．信号量在初始化时可指定一个非负整数值，表示空闲资源总数．在后来的过程中，如果信号量的值非负，那么它表示当前的空闲资源数；如果信号量是负值，那么它的绝对值表示当前等待临界区的进程数．信号量的结构一般定义如下：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">semaphore</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> count;<span class="comment">//计数</span></span><br><span class="line">    queueType <span class="built_in">queue</span>;<span class="comment">//阻塞在该信号量的各个进程的标识</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/19/semaphore-and-P-V-operation/#more" rel="contents">
-              阅读全文 &raquo;
             </a>
-          </div>
-          <!--/noindex-->
         
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-09-08T14:17:43+08:00"
+              content="2018-09-08" >
+          09-08
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
       
     </div>
-    
-    
-    
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
   
   
   
-  </article>
-
-
-    
-      
 
   
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/08/18/coordinate-transformation-in-space/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="虞昧">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="愚昧学习志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/18/coordinate-transformation-in-space/" itemprop="url">空间中的坐标变换</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-18T09:36:23+08:00">
-                2018-08-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/解析几何/" itemprop="url" rel="index">
-                    <span itemprop="name">解析几何</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>&emsp;&emsp;我们考虑将空间直角坐标系中的一点$\,P_1(x_1,y_1,z_1)\,$绕直线$\,l\colon\dfrac xa=\dfrac yb=\dfrac zc\,$逆时针（观察视角使得向量$\,(a,b,c)\,$指向观察者的眼睛，下同）旋转$\,\theta\,$角，得到的点记为$\,P_2(x_2,y_2,z_2)$，然后尝试找出这两点坐标的关系．</p>
-<p>&emsp;&emsp;首先，我们熟知平面中的一点绕原点<strong>逆时针</strong>旋转$\,\theta\,$角坐标变换公式为<br>$$\begin{pmatrix}x’\\y’\end{pmatrix}=<br>\begin{pmatrix}\cos\theta&amp;-\sin\theta\\ \sin\theta&amp;\cos\theta\end{pmatrix}\begin{pmatrix}x\\y\end{pmatrix}.$$借此，我们可以很快地得出空间中一点绕某条坐标轴转的公式，因为绕坐标轴旋转时有一个坐标分量是不变的，相当于二维时的情形．而对于任意的旋转轴，我们可以尝试通过旋转坐标系，使得直线$\,l\,$成为$\,z\,$轴，然后就变为一点绕$\,z\,$轴旋转的问题了，之后再将坐标系旋转回来即可．
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/18/coordinate-transformation-in-space/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/08/17/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="虞昧">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="愚昧学习志">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/17/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-17T16:27:16+08:00">
-                2018-08-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/站务/" itemprop="url" rel="index">
-                    <span itemprop="name">站务</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>&emsp;&emsp;你好，世界！
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/17/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
 
 
           </div>
