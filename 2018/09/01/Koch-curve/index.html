@@ -89,7 +89,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/09/01/5b8a5571cf5cd.gif">
 <meta property="og:image" content="https://i.loli.net/2018/09/01/5b8a67f8e5b56.png">
-<meta property="og:updated_time" content="2018-09-03T11:31:05.867Z">
+<meta property="og:updated_time" content="2018-09-09T05:57:16.845Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="科赫曲线">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;科赫曲线也叫雪花曲线，在 Mathematica 中由KochCurve[]可以直接得到．不过，我们可以尝试重复造轮子来提升自己的思维能力．">
@@ -392,8 +392,8 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
       
         <p>&emsp;&emsp;科赫曲线也叫雪花曲线，在 Mathematica 中由<code>KochCurve[]</code>可以直接得到．不过，我们可以尝试重复造轮子来提升自己的思维能力．<center><img src="https://i.loli.net/2018/09/01/5b8a5571cf5cd.gif" width="250"></center><a id="more"></a></p>
-<p>&emsp;&emsp;不直接使用现成的函数，我们可以这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Graphics@Line@</span><br><span class="line">  AnglePath@</span><br><span class="line">   ReplacePart[</span><br><span class="line">    Nest[Flatten[&#123;#, 1, -2, 1&#125; &amp; /@ #] &amp;, &#123;1, 1, -2, 1&#125;, 3] 60 Degree,</span><br><span class="line">     1 -&gt; 0]</span><br></pre></td></tr></table></figure></p>
-<p>&emsp;&emsp;这里的代码很难用自然语言去描述，但是细心看还是不难理解的，因为关键点只是找出线段偏转角度的变化规律．同样的道理，我们还可以画封闭的科赫曲线：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Graphics@Line@</span><br><span class="line">  AnglePath[</span><br><span class="line">   Nest[Flatten[&#123;#, -1, 2, -1&#125; &amp; /@ #] &amp;, &#123;2, 2, 2, 2&#125;, 3] 60 Degree]</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;不直接使用现成的函数，我们可以这样：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Graphics</span>@<span class="keyword">Line</span>@</span><br><span class="line">  <span class="keyword">AnglePath</span>@</span><br><span class="line">   <span class="keyword">ReplacePart</span>[</span><br><span class="line">    <span class="keyword">Nest</span>[<span class="keyword">Flatten</span>[&#123;#, 1, -2, 1&#125; &amp; /@ #] &amp;, &#123;1, 1, -2, 1&#125;, <span class="number">3</span>] <span class="number">60</span> <span class="keyword">Degree</span>,</span><br><span class="line">     <span class="number">1</span> -&gt; <span class="number">0</span>]</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这里的代码很难用自然语言去描述，但是细心看还是不难理解的，因为关键点只是找出线段偏转角度的变化规律．同样的道理，我们还可以画封闭的科赫曲线：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Graphics</span>@<span class="keyword">Line</span>@</span><br><span class="line">  <span class="keyword">AnglePath</span>[</span><br><span class="line">   <span class="keyword">Nest</span>[<span class="keyword">Flatten</span>[&#123;#, -1, 2, -1&#125; &amp; /@ #] &amp;, &#123;2, 2, 2, 2&#125;, <span class="number">3</span>] <span class="number">60</span> <span class="keyword">Degree</span>]</span><br></pre></td></tr></table></figure></p>
 <center><img src="https://i.loli.net/2018/09/01/5b8a67f8e5b56.png" width="200"></center>
 
       
@@ -534,7 +534,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -556,7 +556,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

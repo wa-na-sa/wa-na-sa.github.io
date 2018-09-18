@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="愚昧学习志">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/09/03/5b8d1bd73a8f4.gif">
-<meta property="og:updated_time" content="2018-09-03T11:48:50.732Z">
+<meta property="og:updated_time" content="2018-09-09T05:48:15.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="维则克分形">
 <meta name="twitter:image" content="https://i.loli.net/2018/09/03/5b8d1bd73a8f4.gif">
@@ -388,7 +388,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
       
         <p><center><img src="https://i.loli.net/2018/09/03/5b8d1bd73a8f4.gif" width="250"></center><a id="more"></a></p>
-<p>&emsp;&emsp;上面这个图形叫做维则克分形，在 Mathematica 中，我们可以这样将它画出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">VicsekFractal[depth_] :=</span><br><span class="line">  Graphics[Polygon /@</span><br><span class="line">    Partition[</span><br><span class="line">     Nest[ScalingTransform[&#123;1/3, 1/3&#125;] /@</span><br><span class="line">        Join @@ Table[</span><br><span class="line">          t[#], &#123;t,</span><br><span class="line">           TranslationTransform /@ (Tuples[&#123;-1, 1&#125;, 2]~</span><br><span class="line">              Join~&#123;&#123;0, 0&#125;&#125;)&#125;] &amp;, AnglePath[&#123;1, 1, 1&#125; Pi/2], depth],</span><br><span class="line">     4]];</span><br><span class="line">ListAnimate[Table[VicsekFractal[i], &#123;i, 0, 5&#125;]]</span><br></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;上面这个图形叫做维则克分形，在 Mathematica 中，我们可以这样将它画出来：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">VicsekFractal[depth_] :=</span><br><span class="line">  <span class="keyword">Graphics</span>[<span class="keyword">Polygon</span> /@</span><br><span class="line">    <span class="keyword">Partition</span>[</span><br><span class="line">     <span class="keyword">Nest</span>[<span class="keyword">ScalingTransform</span>[&#123;1/3, 1/3&#125;] /@</span><br><span class="line">        <span class="keyword">Join</span> @@ <span class="keyword">Table</span>[</span><br><span class="line">          t[#], &#123;t,</span><br><span class="line">           TranslationTransform /@ (Tuples[&#123;-1, 1&#125;, <span class="number">2</span>]~</span><br><span class="line">              <span class="keyword">Join</span>~&#123;&#123;0, 0&#125;&#125;)&#125;] &amp;, <span class="keyword">AnglePath</span>[&#123;1, 1, 1&#125; <span class="keyword">Pi</span>/<span class="number">2</span>], depth],</span><br><span class="line">     <span class="number">4</span>]];</span><br><span class="line"><span class="keyword">ListAnimate</span>[<span class="keyword">Table</span>[VicsekFractal[i], &#123;i, 0, 5&#125;]]</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;其中的主要思想就是四个方向的平移再加上一个零变换，然后再缩放为原来的三分之一，如此迭代．</p>
 
       
@@ -529,7 +529,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -551,7 +551,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
