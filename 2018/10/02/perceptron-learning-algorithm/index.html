@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="机器学习," />
 
 
 
@@ -79,13 +79,25 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="愚昧学习志">
-<meta property="og:url" content="http://nyuls.com/tags/三角函数/index.html">
+<meta name="description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．">
+<meta name="keywords" content="机器学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="感知器算法">
+<meta property="og:url" content="http://nyuls.com/2018/10/02/perceptron-learning-algorithm/index.html">
 <meta property="og:site_name" content="愚昧学习志">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016323ada.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016335a2b.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016336ae2.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016336250.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/02/5bb301639868d.gif">
+<meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016359297.png">
+<meta property="og:updated_time" content="2018-10-02T06:27:45.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="愚昧学习志">
+<meta name="twitter:title" content="感知器算法">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/02/5bb3016323ada.png">
 
 
 
@@ -143,13 +155,13 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-  <link rel="canonical" href="http://nyuls.com/tags/三角函数/"/>
+  <link rel="canonical" href="http://nyuls.com/2018/10/02/perceptron-learning-algorithm/"/>
 
 
 
 
 
-  <title>标签: 三角函数 | 愚昧学习志</title>
+  <title>感知器算法 | 愚昧学习志</title>
   
 
 
@@ -178,7 +190,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -282,54 +294,207 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>三角函数<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/10/02/perceptron-learning-algorithm/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虞昧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="愚昧学习志">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/09/08/geometrical-explanation-for-prosthaphaeresis/" itemprop="url">
-              
-                <span itemprop="name">和差化积的图形解释</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">感知器算法</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-08T14:17:43+08:00"
-              content="2018-09-08" >
-          09-08
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-02T13:13:32+08:00">
+                2018-10-02
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mathematica/" itemprop="url" rel="index">
+                    <span itemprop="name">Mathematica</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．<center><img src="https://i.loli.net/2018/10/02/5bb3016323ada.png" alt="平面上的一些点" width="250"></center><a id="more"></a></p>
+<p>&emsp;&emsp;为了找到这条直线，我们先以原点为起点，任取待分类的一点为终点，得到一个向量$\,\bm w_1\,$，再以$\,\bm w_1\,$为法向量作一条过原点的直线．<center><img src="https://i.loli.net/2018/10/02/5bb3016335a2b.png" alt="第一次找到的直线" width="250"></center></p>
+<p>显然，这样的一条直线是很粗糙的，我们应该想办法去修正它．为了便于描述，我们把蓝色的点标记为$\,1$，而黄色的点标记为$\,-1$，这些点记为$\,\bm x_{i}$，他们对应的标记为$\,y_i$．那么，如果$$\sgn(\bm w_1\cdot\bm x_i)=y_i,$$就说明这个点已经被正确分类．如果$\,\bm x_i\,$还没有被正确分类，我们就专门为$\,\bm x_i\,$去调整直线的法向量：$$\bm w_2=\bm w_1+y_i\bm x_i.$$<center><img src="https://i.loli.net/2018/10/02/5bb3016336ae2.png" alt="调整得到的新法向量" width="250"></center></p>
+<p>这样，再以$\,\bm w_2\,$为法向量，作一条过原点的直线，就能把之前分类错误的点正确分类了．<center><img src="https://i.loli.net/2018/10/02/5bb3016336250.png" alt="调整后的直线" width="250"></center></p>
+<p>不过目前还是没有将全部的点分类正确，但是相比前一条直线已经好很多了，所以我们可以继续重复前面的调整步骤．</p>
+<p>&emsp;&emsp;可以证明，当真的存在一条“完美”的分隔直线时，这样的算法是收敛的．因为，如果存在一条“完美”直线，我们可以设它的法向量为$\,\bm w$，并且是一个单位向量．用$\,\bm w_t\,$表示第$\,t\,$个法向量，用$\,\bm x_{i,t}\,$表示第$\,t\,$次发现的错误点．那么有$$y_i\bm w\cdot\bm x_{i}\geqslant\min_iy_i\bm w\cdot\bm x_{i}&gt;0,$$从而\begin{align}<br>\bm w\cdot\bm w_{t+1}&amp;=\bm w\cdot(\bm w_t+y_i\bm x_{i,t})\notag\\<br>&amp;\geqslant \bm w\cdot\bm w_t+\min_iy_i\bm w\cdot\bm x_{i}\label{eq10021}\\<br>&amp;&gt;\bm w\cdot\bm w_t\notag.<br>\end{align}另一方面，注意到只有遇到错误的点时才会对$\,\bm w_t\,$进行调整，所以\begin{align}<br>\bm w_{t+1}^2&amp;=(\bm w_t+y_i\bm x_{i,t})^2\notag\\<br>&amp;=\bm w_t^2+2y_i\bm w_t\bm x_{i,t}+\bm x_{i,t}^2\notag\\<br>&amp;&lt;\bm w_t^2+\bm x_{i,t}^2\notag\\<br>&amp;\leqslant\bm w_t^2+\max_i\bm x_{i}^2.\label{eq10022}<br>\end{align}如果记$$R^2=\max_i\bm x_i^2,\rho=\min_iy_i\bm w\cdot\bm x_i,\bm w_0=\bm 0,$$那么由\eqref{eq10021}式有$$\bm w\cdot\bm w_t\geqslant t\cdot\min_iy_i\bm w\cdot\bm x_{i}=t\rho,$$由\eqref{eq10022}式有$$\bm w_t^2\leqslant t\cdot\max_i\bm x_{i}^2=tR^2.$$进而$$1\geqslant\bm w\cdot\frac{\bm w_t}{|\bm w_t|}\geqslant\sqrt t\cdot\dfrac{\rho}{R},$$因此，经过不超过$\,\dfrac{R^2}{\rho^2}\,$次的调整，就能得到一条“完美”的分隔直线．<center><img src="https://i.loli.net/2018/10/02/5bb301639868d.gif" alt="完整的调整过程" width="250"></center></p>
+<p>&emsp;&emsp;对于这种可以找到一条直线将其完美分隔的数据集，我们称它为线性可分的，像下图中的点就不是线性可分的，此时感知器算法不再适用．<center><img src="https://i.loli.net/2018/10/02/5bb3016359297.png" alt="线性不可分的数据" width="250"></center></p>
+<hr>
+<p>&emsp;&emsp;<strong>注</strong>&emsp;文本的Wolfram Notebook文件在<a href="https://github.com/wa-na-sa/Mathematica/blob/master/PerceptronLearningAlgorithm.nb" target="_blank" rel="noopener">这里</a>，里面包含完整的算法．</p>
+<p>&emsp;&emsp;<strong>参考资料</strong>&emsp;台湾大学《机器学习基石》</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="虞昧 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="虞昧 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/01/oppaikansuu/" rel="next" title="日本高校欧派函数对抗大赛">
+                <i class="fa fa-chevron-left"></i> 日本高校欧派函数对抗大赛
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -337,6 +502,15 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDA2OC8xNjU5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -569,11 +743,15 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -597,6 +775,17 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
