@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="机器学习," />
+  <meta name="keywords" content="机器学习,感知器算法,分类问题,线性可分" />
 
 
 
@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．">
-<meta name="keywords" content="机器学习">
+<meta name="description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中最简单的分类问题．">
+<meta name="keywords" content="机器学习,感知器算法,分类问题,线性可分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="感知器算法">
 <meta property="og:url" content="http://nyuls.com/2018/10/02/perceptron-learning-algorithm/index.html">
 <meta property="og:site_name" content="愚昧学习志">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中最简单的分类问题．">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016323ada.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016335a2b.png">
@@ -93,10 +93,10 @@
 <meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016336250.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/02/5bb301639868d.gif">
 <meta property="og:image" content="https://i.loli.net/2018/10/02/5bb3016359297.png">
-<meta property="og:updated_time" content="2018-10-02T06:27:45.723Z">
+<meta property="og:updated_time" content="2018-10-03T13:10:17.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="感知器算法">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中最简单的分类问题．">
 <meta name="twitter:image" content="https://i.loli.net/2018/10/02/5bb3016323ada.png">
 
 
@@ -360,8 +360,8 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mathematica/" itemprop="url" rel="index">
-                    <span itemprop="name">Mathematica</span>
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
                   </a>
                 </span>
 
@@ -397,7 +397,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       
 
       
-        <p>&emsp;&emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中的最简单的分类问题．<center><img src="https://i.loli.net/2018/10/02/5bb3016323ada.png" alt="平面上的一些点" width="250"></center><a id="more"></a></p>
+        <p>&emsp;&emsp;平面上有颜色不同的两类点，我们希望找到一条直线，将这两类点尽可能地隔开，这就是机器学习中最简单的分类问题．<center><img src="https://i.loli.net/2018/10/02/5bb3016323ada.png" alt="平面上的一些点" width="250"></center><a id="more"></a></p>
 <p>&emsp;&emsp;为了找到这条直线，我们先以原点为起点，任取待分类的一点为终点，得到一个向量$\,\bm w_1\,$，再以$\,\bm w_1\,$为法向量作一条过原点的直线．<center><img src="https://i.loli.net/2018/10/02/5bb3016335a2b.png" alt="第一次找到的直线" width="250"></center></p>
 <p>显然，这样的一条直线是很粗糙的，我们应该想办法去修正它．为了便于描述，我们把蓝色的点标记为$\,1$，而黄色的点标记为$\,-1$，这些点记为$\,\bm x_{i}$，他们对应的标记为$\,y_i$．那么，如果$$\sgn(\bm w_1\cdot\bm x_i)=y_i,$$就说明这个点已经被正确分类．如果$\,\bm x_i\,$还没有被正确分类，我们就专门为$\,\bm x_i\,$去调整直线的法向量：$$\bm w_2=\bm w_1+y_i\bm x_i.$$<center><img src="https://i.loli.net/2018/10/02/5bb3016336ae2.png" alt="调整得到的新法向量" width="250"></center></p>
 <p>这样，再以$\,\bm w_2\,$为法向量，作一条过原点的直线，就能把之前分类错误的点正确分类了．<center><img src="https://i.loli.net/2018/10/02/5bb3016336250.png" alt="调整后的直线" width="250"></center></p>
@@ -453,7 +453,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
       
         <div class="post-tags">
           
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+            <a href="/tags/分类问题/" rel="tag"># 分类问题</a>
           
         </div>
       
@@ -475,6 +475,10 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/03/modification-to-PLA/" rel="prev" title="感知器算法的改进">
+                感知器算法的改进 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -547,7 +551,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -569,7 +573,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
