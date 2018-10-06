@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="数论,辗转相除法,最大公约数,C语言" />
+  <meta name="keywords" content="机器学习,概率,统计,霍夫丁不等式" />
 
 
 
@@ -75,18 +75,28 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;以下一行代码可以求两整数之间的最大公因数： 1while(a ^= b ^= a ^= b %= a);//最终结果保存在b中">
-<meta name="keywords" content="数论,辗转相除法,最大公约数,C语言">
+<meta name="description" content="&amp;emsp;&amp;emsp;机器学习的对象是目标函数$\,f$，它是未知的．于是我们会很自然地想到，有限的数据集如何能够确定整个目标函数？让我们先来看这个例子：我们把下面的三张图标记为$\,-1$： 而下面的这三张图标记为$\,1$： 那么现在的问题是，下面的这张图应该被标记为什么？">
+<meta name="keywords" content="机器学习,概率,统计,霍夫丁不等式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一行代码求最大公约数">
-<meta property="og:url" content="http://nyuls.com/2018/09/25/GCD-By-One-Line-Code/index.html">
+<meta property="og:title" content="机器学习的可行性">
+<meta property="og:url" content="http://nyuls.com/2018/10/06/feasibility-of-learning/index.html">
 <meta property="og:site_name" content="愚昧学习志">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;以下一行代码可以求两整数之间的最大公因数： 1while(a ^= b ^= a ^= b %= a);//最终结果保存在b中">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;机器学习的对象是目标函数$\,f$，它是未知的．于是我们会很自然地想到，有限的数据集如何能够确定整个目标函数？让我们先来看这个例子：我们把下面的三张图标记为$\,-1$： 而下面的这三张图标记为$\,1$： 那么现在的问题是，下面的这张图应该被标记为什么？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-03T03:08:53.855Z">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb717af9.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71796a.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71a844.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71a7df.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71a1b2.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71ab83.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71b900.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb8ada456e22.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/06/5bb8ada45bacf.png">
+<meta property="og:updated_time" content="2018-10-06T13:09:09.878Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一行代码求最大公约数">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;以下一行代码可以求两整数之间的最大公因数： 1while(a ^= b ^= a ^= b %= a);//最终结果保存在b中">
+<meta name="twitter:title" content="机器学习的可行性">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;机器学习的对象是目标函数$\,f$，它是未知的．于是我们会很自然地想到，有限的数据集如何能够确定整个目标函数？让我们先来看这个例子：我们把下面的三张图标记为$\,-1$： 而下面的这三张图标记为$\,1$： 那么现在的问题是，下面的这张图应该被标记为什么？">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/06/5bb89eb717af9.png">
 
 
 
@@ -144,7 +154,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-  <link rel="canonical" href="http://nyuls.com/2018/09/25/GCD-By-One-Line-Code/"/>
+  <link rel="canonical" href="http://nyuls.com/2018/10/06/feasibility-of-learning/"/>
 
 
 
@@ -152,7 +162,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <style>
 p{margin:0;}
 </style>
-  <title>一行代码求最大公约数 | 愚昧学习志</title>
+  <title>机器学习的可行性 | 愚昧学习志</title>
   
 
 
@@ -299,7 +309,7 @@ p{margin:0;}
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/09/25/GCD-By-One-Line-Code/">
+    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/10/06/feasibility-of-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="虞昧">
@@ -316,7 +326,7 @@ p{margin:0;}
 
         
         
-          <h1 class="post-title" itemprop="name headline">一行代码求最大公约数</h1>
+          <h1 class="post-title" itemprop="name headline">机器学习的可行性</h1>
         
 
         <div class="post-meta">
@@ -328,8 +338,8 @@ p{margin:0;}
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-25T21:08:30+08:00">
-                2018-09-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T19:32:28+08:00">
+                2018-10-06
               </time>
             
 
@@ -351,8 +361,8 @@ p{margin:0;}
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数论/" itemprop="url" rel="index">
-                    <span itemprop="name">数论</span>
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
                   </a>
                 </span>
 
@@ -388,14 +398,20 @@ p{margin:0;}
       
 
       
-        <p>&emsp;&emsp;以下一行代码可以求两整数之间的最大公因数：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(a ^= b ^= a ^= b %= a);<span class="comment">//最终结果保存在b中</span></span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>&emsp;&emsp;事实上，将它展开来写就是这样：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">    b = b % a;</span><br><span class="line">    a = a ^ b;</span><br><span class="line">    b = b ^ a;</span><br><span class="line">    a = a ^ b;</span><br><span class="line">&#125;<span class="keyword">while</span>(a != <span class="number">0</span>);</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;可以看到，其背后的数学原理仍然是辗转相除法，只不过是使用了三次异或实现了两数（余数与除数）的交换．由于没有使用中间变量，所以可以容易地将代码写成一行．此外，注意到只用加减法也是可以实现两数的交换的，因此也可以写出这样的一行代码：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(a -= (b = (a += b %= a) - b));</span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;<strong>注意</strong>&emsp;这样的代码只可以在私下里交流炫耀一下，在考场上还是不建议写下这样的“骚”代码．</p>
+        <p>&emsp;&emsp;机器学习的对象是目标函数$\,f$，它是未知的．于是我们会很自然地想到，有限的数据集如何能够确定整个目标函数？让我们先来看这个例子：我们把下面的三张图标记为$\,-1$：</p>
+<p><center><div style="width:150px"><div style="float:left; width:50px;"><img src="https://i.loli.net/2018/10/06/5bb89eb717af9.png" alt="grid1.png"></div><div style="float:left; width:50px;"><img src="https://i.loli.net/2018/10/06/5bb89eb71796a.png" alt="grid2.png"></div><div style="float:left; width:50px;"><img src="https://i.loli.net/2018/10/06/5bb89eb71a844.png" alt="grid3.png"></div></div></center><div style="clear:both;"></div>而下面的这三张图标记为$\,1$：</p>
+<p><center><div style="width:150px"><div style="float:left; width:50px;"><img src="https://i.loli.net/2018/10/06/5bb89eb71a7df.png" alt="grid4.png"></div><div style="float:left; width:50px;"><img src="https://i.loli.net/2018/10/06/5bb89eb71a1b2.png" alt="grid5.png"></div><div style="float:left; width:50px;"><img src="https://i.loli.net/2018/10/06/5bb89eb71ab83.png" alt="grid6.png"></div></div></center><div style="clear:both;"></div>那么现在的问题是，下面的这张图应该被标记为什么？</p>
+<p><center><img src="https://i.loli.net/2018/10/06/5bb89eb71b900.png" alt="grid7.png"></center><a id="more"></a></p>
+<p>&emsp;&emsp;我们可以说是$\,1$，因为被标记为$\,1\,$的图都是对称的；我们也可以说是$\,-1$，因为被标记为$\,-1\,$的图的左上角都是黑色的．这样就出现了不唯一的答案，也就是说，已知的数据集中没有足够的信息告诉我们那个是正确答案．</p>
+<p>&emsp;&emsp;我们再来看一个更具体的二元分类例子，设$$f\colon\mathcal X=\{0,1\}^3\to\mathcal Y=\{\circ,\bullet\},$$并且我们已经知道了$\,f\,$在$\,\mathcal D\subsetneqq \mathcal X\,$上的取值$\,y_n=f(\bm x_n)$：$$\begin{array}{c|c}\bm x_n&amp;y_n\\\hline(0,0,0)&amp;\circ\\(0,0,1)&amp;\bullet\\(0,1,0)&amp;\bullet\\(0,1,1)&amp;\circ\\(1,0,0)&amp;\bullet\end{array}$$因为$\,f\,$是未知的，所以所有在$\,\mathcal D\,$中与$\,f\,$取值相同的函数都有可能是$\,f$，这样就会有$\,8\,$个可能的$\,f$：$$\begin{array}{c|c|c|c|c|c|c|c|c|c|c}\bm x_n&amp;y_n&amp;g&amp;f_1&amp;f_2&amp;f_3&amp;f_4&amp;f_5&amp;f_6&amp;f_7&amp;f_8\\\hline(0,0,0)&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ\\(0,0,1)&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet\\(0,1,0)&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet\\(0,1,1)&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\circ\\(1,0,0)&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet\\\hline(1,0,1)&amp;&amp;?&amp;\circ&amp;\circ&amp;\circ&amp;\circ&amp;\bullet&amp;\bullet&amp;\bullet&amp;\bullet\\(1,1,0)&amp;&amp;?&amp;\circ&amp;\circ&amp;\bullet&amp;\bullet&amp;\circ&amp;\circ&amp;\bullet&amp;\bullet\\(1,1,1)&amp;&amp;?&amp;\circ&amp;\bullet&amp;\circ&amp;\bullet&amp;\circ&amp;\bullet&amp;\circ&amp;\bullet\end{array}$$这让我们开始怀疑机器学习的可行性．</p>
+<p>&emsp;&emsp;如果我们坚持$\,f\,$是完全未知的，我们就无法从数据集中学到任何东西，所有我们应该对$\,f\,$作出一些假设．在解决这个问题之前，我们先来看另一件事情．</p>
+<p>&emsp;&emsp;平面上有一堆两种颜色的点，我们想要知道蓝点在其中占的比例$\,\mu$．</p>
+<p><center><img src="https://i.loli.net/2018/10/06/5bb8ada456e22.png" alt="平面上的一堆点" width="250/"></center>如果点的个数不多，我当然可以一个一个地数出来．但是如果点的数量很庞大，我们往往会想到从里面随意抓一把出来，用这一部分中蓝点的比例$\,\nu\,$近似地代替真实的$\,\mu$．</p>
+<p><center><img src="https://i.loli.net/2018/10/06/5bb8ada45bacf.png" alt="从一堆点中抓一把点出来" width="250/"></center>常识告诉我们这样做一般不会有大问题．事实上，我们有霍夫丁不等式$$P[|\mu-\nu|&gt;\varepsilon]\leqslant2\mathrm e^{-2\varepsilon^2N},$$其中$\,P\,$表示概率；$N\,$是样本容量，也就是抓出来的那一把中点的数量；而$\,\varepsilon\,$是误差的容忍度．如果$\,\mu\,$与$\,\nu\,$的差别小于容忍度，我们就说它们是差不多的，不然就说它们差很多．霍夫丁不等式为我们的常识提供了理论支持．</p>
+<p>&emsp;&emsp;现在我们尝试把抓点这件事与机器学习进行联系．对于每一个给定的假设函数$\,h\in\mathcal H$，将它与目标函数$\,f\,$不相等的可能性类比为蓝点的真实比例$\,\mu$，把$\,\mathcal X\,$类比为所有的蓝点和黄点，把$\,\mathcal D\,$类比为我们抓出来的那一把点，把使得$\,h(\bm x)\neq f(\bm x)\,$的$\,\bm x\,$类比为蓝点，使得$\,h(\bm x)=f(\bm x)\,$的$\,\bm x\,$类比为黄点．那么我们就可以把$\,h\,$在$\,\mathcal D\,$上的错误率$\,E_{\mathcal D}(h)\,$近似地作为在$\,\mathcal X\,$上的错误率$\,E_{\mathcal X}(h)$．这时仍然有霍夫丁不等式成立$$P[|E_{\mathcal X}(h)-E_{\mathcal D}(h)|&gt;\varepsilon]\leqslant2\mathrm e^{-2\varepsilon^2N}.$$值得注意的是，对于一个固定的$\,h$，只保证$\,E_{\mathcal D}(h)\approx E_{\mathcal X}(h)\,$是不够的，因为我们无法保证它足够小．所以我们还应该使用一个新的数据集$\,\mathcal V\,$来检验$\,h\,$的错误率．</p>
+<p>&emsp;&emsp;注意到在前面抓点的例子中，我们仍有可能抓出一把全是蓝色的点，即使这样的概率很小很小．此时我们当然不能说蓝点的比例为$\,100\%$．我们把这样一把点叫做坏样本．</p>
+<p>&emsp;&emsp;当有多个假设函数时，设$$\mathcal H=\{h_1,h_2,\cdots,h_M\}.$$我们希望在$\,\mathcal H\,$中挑出一个最好的函数作为$\,g$，使得它与$\,f\,$很接近．如果$\,h_1\,$实际上是一个很好的函数，但是对它而言$\,\mathcal D\,$是一个坏样本，使得$\,E_{\mathcal D}(h_1)\,$很大，最终$\,h_1\,$没有被选为$\,g$；如果$\,h_2\,$实际上是一个很不好的函数，但是对它而言$\,\mathcal D\,$是一个坏样本，使得$\,E_{\mathcal D}(h_2)\,$很小，反而$\,h_2\,$被选为了$\,g$．可以看到，只要$\,\mathcal H\,$中有一个函数碰到坏样本，使得$$|E_{\mathcal X}(h_i)-E_{\mathcal D}(h_i)|&gt;\varepsilon,$$就会对我们挑选最佳函数的过程造成影响．事实上，由于一个数据集只要对一个预测函数$\,h_i\,$是坏样本那么它就是坏样本，所以有<br>\begin{align*}P[\mathcal D \text{ is bad}]&amp;=P\left[\bigvee_{i=1}^M\left(\mathcal D \text{ is bad for }h_i\right)\right]\\&amp;\leqslant\sum_{i=1}^MP\left[\mathcal D \text{ is bad for }h_i\right]\\&amp;\leqslant2M\mathrm e^{-2\varepsilon^2N}.\end{align*}因此对于有限个预测函数，只要数据量足够大，那么遇到坏样本的概率就会足够小．</p>
+<p>&emsp;&emsp;至此，我们就说明了机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与$\,f\,$一摸一样的函数$\,g$；然后用概率论的知识说明对于一个给定的$\,h$，$E_{\mathcal D}(h)\,$和$\,E_{\mathcal D}(h)\,$是可以很接近的；最后说明对于有限多个$\,h_i$，仍能保证$\,E_{\mathcal D}(h_i)\,$和$\,E_{\mathcal D}(h_i)\,$是足够接近．</p>
 
       
     </div>
@@ -442,7 +458,7 @@ p{margin:0;}
       
         <div class="post-tags">
           
-            <a href="/tags/C语言/" rel="tag"># C语言</a>
+            <a href="/tags/概率/" rel="tag"># 概率</a>
           
         </div>
       
@@ -455,8 +471,8 @@ p{margin:0;}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/18/mathematical-analysis-exercise-2/" rel="next" title="数分练习[2]">
-                <i class="fa fa-chevron-left"></i> 数分练习[2]
+              <a href="/2018/10/04/anzhenping-4614/" rel="next" title="安振平老师问题4614">
+                <i class="fa fa-chevron-left"></i> 安振平老师问题4614
               </a>
             
           </div>
@@ -464,10 +480,6 @@ p{margin:0;}
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/30/parametric-equation-of-parabola/" rel="prev" title="抛物线的参数方程">
-                抛物线的参数方程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
