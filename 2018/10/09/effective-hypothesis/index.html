@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="数学分析,连续函数,积分,数列极限" />
+  <meta name="keywords" content="机器学习,成长函数,分类问题,可行性" />
 
 
 
@@ -75,18 +75,35 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;设$\,f\in\mathscr C[0,1]\,$是严格单调递增的非负函数．证明：(1)对任意的$\,n\in\mathbb N$，存在唯一的$\,x_n\in[0,1]$，使得$$\,f^n(x_n)=\int_0^1f^n(x)\,\mathrm dx;$$(2)由第(1)题定义的数列$\,{x_n}\,$满足$\displaystyle\lim_{n\to\inft">
-<meta name="keywords" content="数学分析,连续函数,积分,数列极限">
+<meta name="description" content="&amp;emsp;&amp;emsp;我们已经知道了，当假设函数是有限多个时，机器学习仍是可行的．而当假设函数由无限多个时，不等式\begin{equation}\label{eq10091}P[\mathcal D \text{ is bad}]\leqslant2M\mathrm e^{-2\varepsilon^2N}\end{equation}的右边会趋向于无穷大，就没有意义了．事实上我们应该注意到，不">
+<meta name="keywords" content="机器学习,成长函数,分类问题,可行性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数分练习[1]">
-<meta property="og:url" content="http://nyuls.com/2018/08/24/mathematical-analysis-exercise-1/index.html">
+<meta property="og:title" content="有效的假设">
+<meta property="og:url" content="http://nyuls.com/2018/10/09/effective-hypothesis/index.html">
 <meta property="og:site_name" content="愚昧学习志">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;设$\,f\in\mathscr C[0,1]\,$是严格单调递增的非负函数．证明：(1)对任意的$\,n\in\mathbb N$，存在唯一的$\,x_n\in[0,1]$，使得$$\,f^n(x_n)=\int_0^1f^n(x)\,\mathrm dx;$$(2)由第(1)题定义的数列$\,{x_n}\,$满足$\displaystyle\lim_{n\to\inft">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;我们已经知道了，当假设函数是有限多个时，机器学习仍是可行的．而当假设函数由无限多个时，不等式\begin{equation}\label{eq10091}P[\mathcal D \text{ is bad}]\leqslant2M\mathrm e^{-2\varepsilon^2N}\end{equation}的右边会趋向于无穷大，就没有意义了．事实上我们应该注意到，不">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-03T03:04:10.530Z">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd20648dfb.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd20649034.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd2064a3fc.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd2064b532.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd396cbc22.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd396cd2be.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd396cea98.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd396ca3cd.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd6720039c.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd67202425.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd67203e48.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd672056a6.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd67206c51.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd67208493.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd6723c672.png">
+<meta property="og:image" content="https://i.loli.net/2018/10/10/5bbdd6723b051.png">
+<meta property="og:updated_time" content="2018-10-10T11:13:04.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="数分练习[1]">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;设$\,f\in\mathscr C[0,1]\,$是严格单调递增的非负函数．证明：(1)对任意的$\,n\in\mathbb N$，存在唯一的$\,x_n\in[0,1]$，使得$$\,f^n(x_n)=\int_0^1f^n(x)\,\mathrm dx;$$(2)由第(1)题定义的数列$\,{x_n}\,$满足$\displaystyle\lim_{n\to\inft">
+<meta name="twitter:title" content="有效的假设">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;我们已经知道了，当假设函数是有限多个时，机器学习仍是可行的．而当假设函数由无限多个时，不等式\begin{equation}\label{eq10091}P[\mathcal D \text{ is bad}]\leqslant2M\mathrm e^{-2\varepsilon^2N}\end{equation}的右边会趋向于无穷大，就没有意义了．事实上我们应该注意到，不">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/10/5bbdd20648dfb.png">
 
 
 
@@ -144,7 +161,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-  <link rel="canonical" href="http://nyuls.com/2018/08/24/mathematical-analysis-exercise-1/"/>
+  <link rel="canonical" href="http://nyuls.com/2018/10/09/effective-hypothesis/"/>
 
 
 
@@ -152,7 +169,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <style>
 p{margin:0;}
 </style>
-  <title>数分练习[1] | 愚昧学习志</title>
+  <title>有效的假设 | 愚昧学习志</title>
   
 
 
@@ -299,7 +316,7 @@ p{margin:0;}
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/08/24/mathematical-analysis-exercise-1/">
+    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/10/09/effective-hypothesis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="虞昧">
@@ -316,7 +333,7 @@ p{margin:0;}
 
         
         
-          <h1 class="post-title" itemprop="name headline">数分练习[1]</h1>
+          <h1 class="post-title" itemprop="name headline">有效的假设</h1>
         
 
         <div class="post-meta">
@@ -328,8 +345,8 @@ p{margin:0;}
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-24T19:08:05+08:00">
-                2018-08-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T22:19:07+08:00">
+                2018-10-09
               </time>
             
 
@@ -351,8 +368,8 @@ p{margin:0;}
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学分析/" itemprop="url" rel="index">
-                    <span itemprop="name">数学分析</span>
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
                   </a>
                 </span>
 
@@ -388,11 +405,16 @@ p{margin:0;}
       
 
       
-        <p>&emsp;&emsp;设$\,f\in\mathscr C[0,1]\,$是严格单调递增的非负函数．证明：<br>(1)对任意的$\,n\in\mathbb N$，存在唯一的$\,x_n\in[0,1]$，使得<br>$$\,f^n(x_n)=\int_0^1f^n(x)\,\mathrm dx;$$(2)由第(1)题定义的数列$\,{x_n}\,$满足$\displaystyle\lim_{n\to\infty}x_n=1$．<a id="more"></a></p>
+        <p>&emsp;&emsp;我们已经知道了，当假设函数是有限多个时，机器学习仍是可行的．而当假设函数由无限多个时，不等式\begin{equation}\label{eq10091}P[\mathcal D \text{ is bad}]\leqslant2M\mathrm e^{-2\varepsilon^2N}\end{equation}的右边会趋向于无穷大，就没有意义了．事实上我们应该注意到，不等式$$P[\left(\mathcal D \text{ is bad for }h_i\right)\lor\left(\mathcal D \text{ is bad for }h_j\right)]\leqslant P[\mathcal D \text{ is bad for }h_i]+P[\mathcal D \text{ is bad for }h_j]$$有极大可能是一个很松的不等式，特别是当$\,h_i\,$和$\,h_j\,$是两个比较相近的函数时．因此，我们要考虑由此对不等式\eqref{eq10091}做出改进．<a id="more"></a></p>
+<p>&emsp;&emsp;我们还是先考虑一个二分类问题．设平面上的直线把平面上的点分成两类，在直线一侧的点分为蓝色，另一侧的点分为黄色．再设$\,\mathcal H\,$是平面上所有直线的集合．那么对于平面上一个固定的点$\,\bm x$，我们也可以把$\,\mathcal H\,$中的直线分类两类：一类把$\,\bm x\,$分为蓝色，另一类把$\,\bm x\,$分为黄色．对于平面上固定的$\,2\,$个点$\,\bm x_1,\bm x_2$，$\mathcal H\,$中的直线对这$\,2\,$个点做出下面这$\,4\,$种不同的分类．</p>
+<p><center><div style="width:300px"><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd20648dfb.png" alt="对2个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd20649034.png" alt="对2个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd2064a3fc.png" alt="对2个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd2064b532.png" alt="1-4.png" title="对2个点的一种分类"></div></div></center><div style="clear:both;"></div>对于平面上不共线的固定$\,3\,$个点$\,\bm x_1,\bm x_2,\bm x_3$，$\mathcal H\,$中的直线对这$\,3\,$个点做出$\,8\,$种不同的分类（下面只给出其中$\,4\,$种的图，还有$\,4\,$种是对称的，亦即将蓝色和黄色对调）．<center><div style="width:300px"><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd396cbc22.png" alt="对3个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd396cd2be.png" alt="对3个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd396cea98.png" alt="对3个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd396ca3cd.png" alt="对3个点的一种分类"></div></div></center><div style="clear:both;"></div>对于平面上任意三个都不共线的固定$\,4\,$个点$\,\bm x_1,\bm x_2,\bm x_3,\bm x_4$，$\mathcal H\,$中的直线对这$\,4\,$个点做出$\,14\,$种不同的分类（下面同样地只给出其中$\,7\,$种的图）．<center><div style="width:300px"><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd6720039c.png" alt="对4个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd67202425.png" alt="对4个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd67203e48.png" alt="对4个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd672056a6.png" alt="对4个点的一种分类"></div></div></center><div style="clear:both;"></div><center><div style="width:225px"><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd67206c51.png" alt="对4个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd67208493.png" alt="对4个点的一种分类"></div><div style="float:left; width:75px;"><img src="https://i.loli.net/2018/10/10/5bbdd6723c672.png" alt="对4个点的一种分类"></div></div></center><div style="clear:both;"></div>注意，对直线而言，下面这种分类（以及它的对称）是做不到的！<center><img src="https://i.loli.net/2018/10/10/5bbdd6723b051.png" alt="直线不可能做出的分类" width="75px"></center>于是我们看到，即使假设函数有无穷多个，但其中有效的函数个数仍是有限的，因此，我们可以尝试用有效的函数个数代替\eqref{eq10091}式右边的$\,M$．</p>
+<p>&emsp;&emsp;对于$\,\mathcal X\,$中的$\,N\,$个点$\,\bm x_1,\bm x_2,\cdots,\bm x_N$，我们称$$\mathcal H(\bm x_1,\bm x_2,\cdots,\bm x_N)=\{(h(\bm x_1),h(\bm x_2),\cdots,h(x_N))|h\in\mathcal H\}$$为$\,\mathcal H\,$对这些点的一个对分．然后我们再引入成长函数$$m_{\mathcal H}(N)=\max_{\bm x_1,\cdots,\bm x_N\in\mathcal X}|\mathcal H(\bm x_1,\bm x_2,\cdots,\bm x_N)|.$$它就表示对于有限个点，$\mathcal H\,$中有效函数的个数．注意到前面的例子中，如果平面上有三点共线的话，直线的种类会更少，所以要取最大值．这样，对于前面的例子，就有$$m_{\mathcal H}(1)=2,m_{\mathcal H}(2)=4,m_{\mathcal H}(3)=8,m_{\mathcal H}(4)=14.$$现在，我们就可以把\eqref{eq10091}式改写为\begin{equation}\label{eq10092}P[\mathcal D \text{ is bad}]\leqslant2m_{\mathcal H}(N)\mathrm e^{-2\varepsilon^2N}.\end{equation}此外，不难看到，对于二分类问题总有$$m_{\mathcal H}(N)\leqslant 2^N.$$</p>
+<p>&emsp;&emsp;对于数轴上的$\,N\,$个点$\,x_1,x_2,\cdots,x_n$，当$\,\mathcal H=\{\sgn(x-a)|a\in\mathbb R\}\,$时，容易计算$$m_{\mathcal H}(N)=N+1;$$当$\,\mathcal H=\{\sgn((x-a)(x-b))|a&lt;b;a,b\in\mathbb R\}\,$时，容易计算$$m_{\mathcal H}(N)=\binom{N+1}2+1=\frac{N^2}2+\dfrac N2+1.$$当$\,\bm x_1,\bm x_2,\cdots,\bm x_N\,$是平面中同一个圆周上的点时，取$$\mathcal H=\left\{\left.h(\bm x)=\begin{cases}1,&amp;\bm x\in\mathcal C\\-1,&amp;\bm x\not\in\mathcal C\end{cases}\right|\mathcal C\subset\mathbb R^2\text{ is convex}\right\},$$那么容易计算$$m_{\mathcal H}(N)=2^N.$$此时这$\,N\,$个点所有可能的分类情况都属于$\,\mathcal H$，我们说这$\,N\,$个点被$\,\mathcal H\,$打碎．</p>
+<p>&emsp;&emsp;于是我们看到，当用区间对数轴上的点进行分类时，成长函数是多项式型的，此时\eqref{eq10092}式的右边可以容易地取到较小值，机器学习仍是可行的；当用凸集对圆周上的点进行分类时，成长函数是指数型的，这不是理想的结果，机器学习可能不可行．</p>
+<p>&emsp;&emsp;我们把满足$\,m_{\mathcal H}(k)&lt;2^k\,$的最小的$\,k\,$叫做$\,m_{\mathcal H}(N)\,$的转折点．于是从前面的例子我们马上知道：用直线对平面上的点进行分类时，转折点是$\,4$；用两个区间对数轴上的点进行分类时，转折点是$\,2$；用三个区间对数轴上的点进行分类时，转折点是$\,3$；用凸集对圆周上的点进行分类时，没有转折点．</p>
+<p>&emsp;&emsp;如果没有转折点，很显然$\,m_{\mathcal H}(N)\equiv 2^N$；如果有转折点$\,k$，由用区间对数轴进行分类的例子，我们可以猜测$\,m_{\mathcal H}(N)=O(N^{k-1})$．对于这一猜想的证明或证伪，我们以后再讨论．</p>
 <hr>
-<p>&emsp;&emsp;<strong>出处</strong>&emsp;第六届全国大学生数学竞赛预赛<br>&emsp;&emsp;<strong>证明</strong>&emsp;(1)根据单调性可知$$f^n(0)\leqslant\int_0^1f^n(x)\,\mathrm dx\leqslant f^n(1),$$<br>于是根据连续函数的介值性可知那样的$\,x_n\,$是存在的．又因为$\,f\,$是严格单调的，所以那样的$\,x_n\,$是唯一的．</p>
-<p>&emsp;&emsp;(2)对于任意的$\,\varepsilon\in(0,1)$，有<br>\begin{align*}<br>f^n(x_n)&amp;=\int_0^1f^n(x)\,\mathrm dx\\<br>&amp;&gt;\int_{1-\varepsilon}^1f^n(x)\,\mathrm dx\\<br>&amp;&gt;\int_{1-\varepsilon}^1f^n(1-\varepsilon)\,\mathrm dx\\<br>&amp;=\varepsilon f^n(1-\varepsilon),<br>\end{align*}所以$$f(x_n)&gt;\sqrt[n]{\varepsilon}f(1-\varepsilon),$$进而结合单调递增和连续性有$$f\left(\varliminf_{n\to\infty}x_n\right)=\varliminf_{n\to\infty}f(x_n)\geqslant f(1-\varepsilon),$$再由单调性得到$$\varliminf_{n\to\infty}x_n\geqslant1-\varepsilon.$$因此根据$\,\varepsilon\,$的任意性可知$\displaystyle\lim_{n\to\infty}x_n=1$．</p>
-<p>&emsp;&emsp;<strong>注</strong>&emsp;这里要取下极限是因为我们不能保证$\,\{x_n\}\,$的极限存在，但是根据聚点定理可以知道下极限一定是存在的．</p>
+<p>&emsp;&emsp;<strong>参考资料</strong>&emsp;台湾大学《机器学习基石》</p>
 
       
     </div>
@@ -439,9 +461,9 @@ p{margin:0;}
       
         <div class="post-tags">
           
-            <a href="/tags/积分/" rel="tag"># 积分</a>
+            <a href="/tags/分类问题/" rel="tag"># 分类问题</a>
           
-            <a href="/tags/连续函数/" rel="tag"># 连续函数</a>
+            <a href="/tags/概率/" rel="tag"># 概率</a>
           
         </div>
       
@@ -454,8 +476,8 @@ p{margin:0;}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/23/Desargue-s-Theorem/" rel="next" title="笛沙格定理">
-                <i class="fa fa-chevron-left"></i> 笛沙格定理
+              <a href="/2018/10/06/feasibility-of-learning/" rel="next" title="机器学习的可行性">
+                <i class="fa fa-chevron-left"></i> 机器学习的可行性
               </a>
             
           </div>
@@ -463,10 +485,6 @@ p{margin:0;}
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/25/Hermitian-identity/" rel="prev" title="厄米特恒等式">
-                厄米特恒等式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

@@ -92,7 +92,7 @@
 <meta property="og:image" content="https://i.loli.net/2018/10/06/5bb89eb71b900.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/06/5bb8ada456e22.png">
 <meta property="og:image" content="https://i.loli.net/2018/10/06/5bb8ada45bacf.png">
-<meta property="og:updated_time" content="2018-10-06T13:09:09.878Z">
+<meta property="og:updated_time" content="2018-10-10T11:07:51.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习的可行性">
 <meta name="twitter:description" content="&amp;emsp;&amp;emsp;机器学习的对象是目标函数$\,f$，它是未知的．于是我们会很自然地想到，有限的数据集如何能够确定整个目标函数？让我们先来看这个例子：我们把下面的三张图标记为$\,-1$： 而下面的这三张图标记为$\,1$： 那么现在的问题是，下面的这张图应该被标记为什么？">
@@ -410,8 +410,8 @@ p{margin:0;}
 <p><center><img src="https://i.loli.net/2018/10/06/5bb8ada45bacf.png" alt="从一堆点中抓一把点出来" width="250/"></center>常识告诉我们这样做一般不会有大问题．事实上，我们有霍夫丁不等式$$P[|\mu-\nu|&gt;\varepsilon]\leqslant2\mathrm e^{-2\varepsilon^2N},$$其中$\,P\,$表示概率；$N\,$是样本容量，也就是抓出来的那一把中点的数量；而$\,\varepsilon\,$是误差的容忍度．如果$\,\mu\,$与$\,\nu\,$的差别小于容忍度，我们就说它们是差不多的，不然就说它们差很多．霍夫丁不等式为我们的常识提供了理论支持．</p>
 <p>&emsp;&emsp;现在我们尝试把抓点这件事与机器学习进行联系．对于每一个给定的假设函数$\,h\in\mathcal H$，将它与目标函数$\,f\,$不相等的可能性类比为蓝点的真实比例$\,\mu$，把$\,\mathcal X\,$类比为所有的蓝点和黄点，把$\,\mathcal D\,$类比为我们抓出来的那一把点，把使得$\,h(\bm x)\neq f(\bm x)\,$的$\,\bm x\,$类比为蓝点，使得$\,h(\bm x)=f(\bm x)\,$的$\,\bm x\,$类比为黄点．那么我们就可以把$\,h\,$在$\,\mathcal D\,$上的错误率$\,E_{\mathcal D}(h)\,$近似地作为在$\,\mathcal X\,$上的错误率$\,E_{\mathcal X}(h)$．这时仍然有霍夫丁不等式成立$$P[|E_{\mathcal X}(h)-E_{\mathcal D}(h)|&gt;\varepsilon]\leqslant2\mathrm e^{-2\varepsilon^2N}.$$值得注意的是，对于一个固定的$\,h$，只保证$\,E_{\mathcal D}(h)\approx E_{\mathcal X}(h)\,$是不够的，因为我们无法保证它足够小．所以我们还应该使用一个新的数据集$\,\mathcal V\,$来检验$\,h\,$的错误率．</p>
 <p>&emsp;&emsp;注意到在前面抓点的例子中，我们仍有可能抓出一把全是蓝色的点，即使这样的概率很小很小．此时我们当然不能说蓝点的比例为$\,100\%$．我们把这样一把点叫做坏样本．</p>
-<p>&emsp;&emsp;当有多个假设函数时，设$$\mathcal H=\{h_1,h_2,\cdots,h_M\}.$$我们希望在$\,\mathcal H\,$中挑出一个最好的函数作为$\,g$，使得它与$\,f\,$很接近．如果$\,h_1\,$实际上是一个很好的函数，但是对它而言$\,\mathcal D\,$是一个坏样本，使得$\,E_{\mathcal D}(h_1)\,$很大，最终$\,h_1\,$没有被选为$\,g$；如果$\,h_2\,$实际上是一个很不好的函数，但是对它而言$\,\mathcal D\,$是一个坏样本，使得$\,E_{\mathcal D}(h_2)\,$很小，反而$\,h_2\,$被选为了$\,g$．可以看到，只要$\,\mathcal H\,$中有一个函数碰到坏样本，使得$$|E_{\mathcal X}(h_i)-E_{\mathcal D}(h_i)|&gt;\varepsilon,$$就会对我们挑选最佳函数的过程造成影响．事实上，由于一个数据集只要对一个预测函数$\,h_i\,$是坏样本那么它就是坏样本，所以有<br>\begin{align*}P[\mathcal D \text{ is bad}]&amp;=P\left[\bigvee_{i=1}^M\left(\mathcal D \text{ is bad for }h_i\right)\right]\\&amp;\leqslant\sum_{i=1}^MP\left[\mathcal D \text{ is bad for }h_i\right]\\&amp;\leqslant2M\mathrm e^{-2\varepsilon^2N}.\end{align*}因此对于有限个预测函数，只要数据量足够大，那么遇到坏样本的概率就会足够小．</p>
-<p>&emsp;&emsp;至此，我们就说明了机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与$\,f\,$一摸一样的函数$\,g$；然后用概率论的知识说明对于一个给定的$\,h$，$E_{\mathcal D}(h)\,$和$\,E_{\mathcal D}(h)\,$是可以很接近的；最后说明对于有限多个$\,h_i$，仍能保证$\,E_{\mathcal D}(h_i)\,$和$\,E_{\mathcal D}(h_i)\,$是足够接近．</p>
+<p>&emsp;&emsp;当有多个假设函数时，设$$\mathcal H=\{h_1,h_2,\cdots,h_M\}.$$我们希望在$\,\mathcal H\,$中挑出一个最好的函数作为$\,g$，使得它与$\,f\,$很接近．如果$\,h_1\,$实际上是一个很好的函数，但是对它而言$\,\mathcal D\,$是一个坏样本，使得$\,E_{\mathcal D}(h_1)\,$很大，最终$\,h_1\,$没有被选为$\,g$；如果$\,h_2\,$实际上是一个很不好的函数，但是对它而言$\,\mathcal D\,$是一个坏样本，使得$\,E_{\mathcal D}(h_2)\,$很小，反而$\,h_2\,$被选为了$\,g$．可以看到，只要$\,\mathcal H\,$中有一个函数碰到坏样本，使得$$|E_{\mathcal X}(h_i)-E_{\mathcal D}(h_i)|&gt;\varepsilon,$$就会对我们挑选最佳函数的过程造成影响．事实上，由于一个数据集只要对一个预测函数$\,h_i\,$是坏样本那么它就是坏样本，所以有<br>\begin{align*}P[\mathcal D \text{ is bad}]&amp;=P\left[\bigvee_{i=1}^M\left(\mathcal D \text{ is bad for }h_i\right)\right]\\&amp;\leqslant\sum_{i=1}^MP\left[\mathcal D \text{ is bad for }h_i\right]\\&amp;\leqslant2M\mathrm e^{-2\varepsilon^2N}.\end{align*}因此对于有限个假设函数，只要数据量足够大，那么遇到坏样本的概率就会足够小．</p>
+<h2 id="emsp-emsp-至此，我们就说明了当数据集遵循概率上的某种分布时，机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与-f-一摸一样的函数-g-；然后用概率论的知识说明对于一个给定的-h-，-E-mathcal-D-h-和-E-mathcal-D-h-是可以很接近的；最后说明对于有限多个-h-i-，仍能保证-E-mathcal-D-h-i-和-E-mathcal-D-h-i-是足够接近．"><a href="#emsp-emsp-至此，我们就说明了当数据集遵循概率上的某种分布时，机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与-f-一摸一样的函数-g-；然后用概率论的知识说明对于一个给定的-h-，-E-mathcal-D-h-和-E-mathcal-D-h-是可以很接近的；最后说明对于有限多个-h-i-，仍能保证-E-mathcal-D-h-i-和-E-mathcal-D-h-i-是足够接近．" class="headerlink" title="&emsp;&emsp;至此，我们就说明了当数据集遵循概率上的某种分布时，机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与$\,f\,$一摸一样的函数$\,g$；然后用概率论的知识说明对于一个给定的$\,h$，$E_{\mathcal D}(h)\,$和$\,E_{\mathcal D}(h)\,$是可以很接近的；最后说明对于有限多个$\,h_i$，仍能保证$\,E_{\mathcal D}(h_i)\,$和$\,E_{\mathcal D}(h_i)\,$是足够接近．"></a>&emsp;&emsp;至此，我们就说明了当数据集遵循概率上的某种分布时，机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与$\,f\,$一摸一样的函数$\,g$；然后用概率论的知识说明对于一个给定的$\,h$，$E_{\mathcal D}(h)\,$和$\,E_{\mathcal D}(h)\,$是可以很接近的；最后说明对于有限多个$\,h_i$，仍能保证$\,E_{\mathcal D}(h_i)\,$和$\,E_{\mathcal D}(h_i)\,$是足够接近．</h2><p>&emsp;&emsp;<strong>参考资料</strong>&emsp;台湾大学《机器学习基石》</p>
 
       
     </div>
@@ -481,6 +481,10 @@ p{margin:0;}
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/10/09/effective-hypothesis/" rel="prev" title="有效的假设">
+                有效的假设 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -536,8 +540,17 @@ p{margin:0;}
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -552,7 +565,7 @@ p{margin:0;}
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -613,6 +626,22 @@ p{margin:0;}
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#emsp-emsp-至此，我们就说明了当数据集遵循概率上的某种分布时，机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与-f-一摸一样的函数-g-；然后用概率论的知识说明对于一个给定的-h-，-E-mathcal-D-h-和-E-mathcal-D-h-是可以很接近的；最后说明对于有限多个-h-i-，仍能保证-E-mathcal-D-h-i-和-E-mathcal-D-h-i-是足够接近．"><span class="nav-number">1.</span> <span class="nav-text">  至此，我们就说明了当数据集遵循概率上的某种分布时，机器学习是可行的．最后，我们再整理一下我们的逻辑顺序：首先我们指出机器学习不能找到一个与$\,f\,$一摸一样的函数$\,g$；然后用概率论的知识说明对于一个给定的$\,h$，$E_{\mathcal D}(h)\,$和$\,E_{\mathcal D}(h)\,$是可以很接近的；最后说明对于有限多个$\,h_i$，仍能保证$\,E_{\mathcal D}(h_i)\,$和$\,E_{\mathcal D}(h_i)\,$是足够接近．</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
