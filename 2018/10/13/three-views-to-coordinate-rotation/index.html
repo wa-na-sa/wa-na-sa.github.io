@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="和差化积,三角函数,几何意义" />
+  <meta name="keywords" content="线性变换,坐标旋转,棣莫弗公式,解析几何" />
 
 
 
@@ -75,17 +75,20 @@
 
 
 
-<meta name="keywords" content="和差化积,三角函数,几何意义">
+<meta name="description" content="&amp;emsp;&amp;emsp;设平面上的一点$\,(x,y)\,$绕原点逆时针旋转$\,\theta\,$角后变为$\,(x’,y’)$，我们来从多个角度找出这两个坐标之间的关系．">
+<meta name="keywords" content="线性变换,坐标旋转,棣莫弗公式,解析几何">
 <meta property="og:type" content="article">
-<meta property="og:title" content="和差化积的图形解释">
-<meta property="og:url" content="http://nyuls.com/2018/09/08/geometrical-explanation-for-prosthaphaeresis/index.html">
+<meta property="og:title" content="坐标旋转的三个角度">
+<meta property="og:url" content="http://nyuls.com/2018/10/13/three-views-to-coordinate-rotation/index.html">
 <meta property="og:site_name" content="愚昧学习志">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;设平面上的一点$\,(x,y)\,$绕原点逆时针旋转$\,\theta\,$角后变为$\,(x’,y’)$，我们来从多个角度找出这两个坐标之间的关系．">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/09/08/5b936a4459a35.png">
-<meta property="og:updated_time" content="2018-10-03T03:06:29.743Z">
+<meta property="og:image" content="https://i.loli.net/2018/10/13/5bc14ce58d4ad.png">
+<meta property="og:updated_time" content="2018-10-13T01:47:39.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="和差化积的图形解释">
-<meta name="twitter:image" content="https://i.loli.net/2018/09/08/5b936a4459a35.png">
+<meta name="twitter:title" content="坐标旋转的三个角度">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;设平面上的一点$\,(x,y)\,$绕原点逆时针旋转$\,\theta\,$角后变为$\,(x’,y’)$，我们来从多个角度找出这两个坐标之间的关系．">
+<meta name="twitter:image" content="https://i.loli.net/2018/10/13/5bc14ce58d4ad.png">
 
 
 
@@ -143,7 +146,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 
-  <link rel="canonical" href="http://nyuls.com/2018/09/08/geometrical-explanation-for-prosthaphaeresis/"/>
+  <link rel="canonical" href="http://nyuls.com/2018/10/13/three-views-to-coordinate-rotation/"/>
 
 
 
@@ -151,7 +154,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <style>
 p{margin:0;}
 </style>
-  <title>和差化积的图形解释 | 愚昧学习志</title>
+  <title>坐标旋转的三个角度 | 愚昧学习志</title>
   
 
 
@@ -298,7 +301,7 @@ p{margin:0;}
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/09/08/geometrical-explanation-for-prosthaphaeresis/">
+    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/10/13/three-views-to-coordinate-rotation/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="虞昧">
@@ -315,7 +318,7 @@ p{margin:0;}
 
         
         
-          <h1 class="post-title" itemprop="name headline">和差化积的图形解释</h1>
+          <h1 class="post-title" itemprop="name headline">坐标旋转的三个角度</h1>
         
 
         <div class="post-meta">
@@ -327,8 +330,8 @@ p{margin:0;}
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-08T14:17:43+08:00">
-                2018-09-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-13T09:28:18+08:00">
+                2018-10-13
               </time>
             
 
@@ -350,8 +353,8 @@ p{margin:0;}
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/初等数学/" itemprop="url" rel="index">
-                    <span itemprop="name">初等数学</span>
+                  <a href="/categories/解析几何/" itemprop="url" rel="index">
+                    <span itemprop="name">解析几何</span>
                   </a>
                 </span>
 
@@ -387,10 +390,10 @@ p{margin:0;}
       
 
       
-        <p><center><img src="https://i.loli.net/2018/09/08/5b936a4459a35.png" alt="和差化积的图形解释" width="200/"></center><a id="more"></a></p>
-<hr>
-<p>&emsp;&emsp;如图，在单位圆中，<br>\begin{align*}<br>\sin\alpha+\sin\beta&amp;=AD\\<br>&amp;=AC\cdot\cos\dfrac{\alpha-\beta}{2}\\<br>&amp;=2\sin\dfrac{\alpha+\beta}{2}\cdot\cos\dfrac{\alpha-\beta}{2}.<br>\end{align*}</p>
-<p>&emsp;&emsp;<strong>注</strong>&emsp;韦达最早由这个图形得到了和差化积公式．</p>
+        <p>&emsp;&emsp;设平面上的一点$\,(x,y)\,$绕原点逆时针旋转$\,\theta\,$角后变为$\,(x’,y’)$，我们来从多个角度找出这两个坐标之间的关系．<a id="more"></a></p>
+<p>&emsp;&emsp;设$$\begin{cases}x=r\cos\alpha\\y=r\sin\alpha\end{cases},$$那么$$\begin{cases}x’=r\cos(\alpha+\theta)\\y’=r\sin(\alpha+\theta)\end{cases}.$$<center><img src="https://i.loli.net/2018/10/13/5bc14ce58d4ad.png" alt="坐标的旋转" width="250/"></center>这样就有\begin{align*}x’&amp;=r\cos\alpha\cos\theta-r\sin\alpha\sin\theta\\&amp;=x\cos\theta-y\sin\theta,\end{align*}以及$$y’=x\sin\theta+y\cos\theta.$$这样我们就得到$\,(x’,y’)\,$与$\,(x,y)\,$之间的关系为\begin{equation}\label{eq10101}\begin{cases}x’=x\cos\theta-y\sin\theta\\y’=x\sin\theta+y\cos\theta\end{cases}.\end{equation}</p>
+<p>&emsp;&emsp;事实上，根据棣莫弗公式我们马上知道$$x’+y’\mathrm i=(x+y\mathrm i)(\cos\theta+\mathrm i\sin\theta),$$于是比较等号两边的实部和虚部就能得到\eqref{eq10101}式．</p>
+<p>&emsp;&emsp;此外，我们还知道旋转是一个线性变换，记为$\,\mathscr P$．于是\begin{align*}(x’,y’)&amp;=\mathscr P(x,y)\\&amp;=\mathscr P(x\bm e_1+y\bm e_2)\\&amp;=x\mathscr P\bm e_1+y\mathscr P\bm e_2,\end{align*}其中$\,\bm e_1\,$和$\,\bm e_2\,$是标准正交基．而我们很容易地知道\begin{align*}\mathscr P\bm e_1&amp;=(\cos\theta,\sin\theta),\\\mathscr P\bm e_2&amp;=(\cos(\pi/2+\theta),\sin(\pi/2+\theta))=(-\sin\theta,\cos\theta),\end{align*}从而也得到了\eqref{eq10101}式．</p>
 
       
     </div>
@@ -437,7 +440,11 @@ p{margin:0;}
       
         <div class="post-tags">
           
-            <a href="/tags/三角函数/" rel="tag"># 三角函数</a>
+            <a href="/tags/坐标变换/" rel="tag"># 坐标变换</a>
+          
+            <a href="/tags/线性变换/" rel="tag"># 线性变换</a>
+          
+            <a href="/tags/复数/" rel="tag"># 复数</a>
           
         </div>
       
@@ -450,8 +457,8 @@ p{margin:0;}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/09/03/Vicsek-fractal/" rel="next" title="维则克分形">
-                <i class="fa fa-chevron-left"></i> 维则克分形
+              <a href="/2018/10/11/understanding-of-The-O'Stolz-Theorem/" rel="next" title="对斯托尔茨定理的理解">
+                <i class="fa fa-chevron-left"></i> 对斯托尔茨定理的理解
               </a>
             
           </div>
@@ -459,10 +466,6 @@ p{margin:0;}
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/18/mathematical-analysis-exercise-2/" rel="prev" title="数分练习[2]">
-                数分练习[2] <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
