@@ -64,6 +64,7 @@
 
 
 
+  <meta name="keywords" content="洛必达法则,分部积分法,累次积分,极限,导数" />
 
 
 
@@ -73,15 +74,19 @@
 
 
 
-<meta name="keywords" content="数学, 编程, 学习笔记, 机器学习, Mathematica">
+
+<meta name="description" content="&amp;emsp;&amp;emsp;证明：$$\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy=\int_0^1y^y\,\mathrm dy.$$">
+<meta name="keywords" content="洛必达法则,分部积分法,累次积分,极限,导数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="愚昧学习志">
+<meta property="og:title" content="数分练习[3]">
 <meta property="og:url" content="http://nyuls.com/2018/10/22/mathematical-analysis-exercise-3/index.html">
 <meta property="og:site_name" content="愚昧学习志">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;证明：$$\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy=\int_0^1y^y\,\mathrm dy.$$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-22T11:57:37.862Z">
+<meta property="og:updated_time" content="2018-10-22T11:57:37.868Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="愚昧学习志">
+<meta name="twitter:title" content="数分练习[3]">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;证明：$$\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy=\int_0^1y^y\,\mathrm dy.$$">
 
 
 
@@ -147,7 +152,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <style>
 p{margin:0;}
 </style>
-  <title> | 愚昧学习志</title>
+  <title>数分练习[3] | 愚昧学习志</title>
   
 
 
@@ -311,7 +316,7 @@ p{margin:0;}
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">数分练习[3]</h1>
         
 
         <div class="post-meta">
@@ -333,6 +338,28 @@ p{margin:0;}
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数学分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -361,7 +388,12 @@ p{margin:0;}
       
 
       
-        
+        <p>&emsp;&emsp;证明：<br>$$\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy=\int_0^1y^y\,\mathrm dy.$$<a id="more"></a></p>
+<hr>
+<p>&emsp;&emsp;<strong>证明</strong>&emsp;令$\,xy=t$，那么\begin{align*}\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy&amp;=\int_0^1\dfrac1y\int_0^yt^t\,\mathrm dt\,\mathrm dy\\&amp;=\int_0^1\int_0^yt^t\,\mathrm dt\,\mathrm d\ln y\\&amp;=\left.\ln y\cdot\int_0^yt^t\,\mathrm dt\right|_0^1-\int_0^1\ln y\,\mathrm d\int_0^yt^t\,\mathrm dt\\&amp;=-\lim_{y\to0}\ln y\cdot\int_0^yt^t\,\mathrm dt-\int_0^1y^y\ln y\,\mathrm dy.\end{align*}熟知$$\lim_{y\to0}y\ln y=0,$$由洛必达法则又有$$\lim_{y\to0}\dfrac{\int_0^yt^t\,\mathrm dt}{y}=\lim_{y\to0}y^y=1,$$所以$$\lim_{y\to0}\ln y\cdot\int_0^yt^t\,\mathrm dt=\lim_{y\to0}y\ln y\cdot\lim_{y\to0}\dfrac{\int_0^yt^t\,\mathrm dt}{y}=0,$$因此$$\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy=-\int_0^1y^y\ln y\,\mathrm dy.$$注意到$$\left(y^y\right)’=y^y\ln y+y^y,$$所以$$\int_0^1\int_0^1(xy)^{xy}\,\mathrm dx\,\mathrm dy=\int_0^1\left(y^y-\left(y^y\right)’\right)\,\mathrm dy=\int_0^1y^y\,\mathrm dy.$$</p>
+<hr>
+<p>&emsp;&emsp;<strong>注</strong>&emsp;这题的结果十分漂亮！</p>
+
       
     </div>
     
@@ -404,6 +436,14 @@ p{margin:0;}
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/定积分/" rel="tag"># 定积分</a>
+          
+            <a href="/tags/极限/" rel="tag"># 极限</a>
+          
+        </div>
       
 
       
