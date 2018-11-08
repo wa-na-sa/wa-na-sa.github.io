@@ -64,6 +64,7 @@
 
 
 
+  <meta name="keywords" content="多元函数,微分学,偏导数,反例,连续性" />
 
 
 
@@ -73,14 +74,19 @@
 
 
 
-<meta name="keywords" content="数学, 编程, 学习笔记, 机器学习, Mathematica">
-<meta property="og:type" content="website">
-<meta property="og:title" content="愚昧学习志">
-<meta property="og:url" content="http://nyuls.com/archives/2018/page/3/index.html">
+
+<meta name="description" content="&amp;emsp;&amp;emsp;多元函数的连续性和偏导数的存在性、可微性以及连续性之间的关系是：$$偏导数连续\Longrightarrow可微\Longrightarrow\begin{cases}连续\\\\偏导数存在\end{cases},$$其中平行的结论互不蕴涵．">
+<meta name="keywords" content="多元函数,微分学,偏导数,反例,连续性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="多元函数微分学中的反例">
+<meta property="og:url" content="http://nyuls.com/2018/11/08/counterexamples-in-multivariable-differential/index.html">
 <meta property="og:site_name" content="愚昧学习志">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;多元函数的连续性和偏导数的存在性、可微性以及连续性之间的关系是：$$偏导数连续\Longrightarrow可微\Longrightarrow\begin{cases}连续\\\\偏导数存在\end{cases},$$其中平行的结论互不蕴涵．">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-08T12:01:41.538Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="愚昧学习志">
+<meta name="twitter:title" content="多元函数微分学中的反例">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;多元函数的连续性和偏导数的存在性、可微性以及连续性之间的关系是：$$偏导数连续\Longrightarrow可微\Longrightarrow\begin{cases}连续\\\\偏导数存在\end{cases},$$其中平行的结论互不蕴涵．">
 
 
 
@@ -140,7 +146,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
 
-  <link rel="canonical" href="http://nyuls.com/archives/2018/page/3/"/>
+  <link rel="canonical" href="http://nyuls.com/2018/11/08/counterexamples-in-multivariable-differential/"/>
 
 
 
@@ -148,7 +154,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <style>
 p{margin:0;}
 </style>
-  <title>归档 | 愚昧学习志</title>
+  <title>多元函数微分学中的反例 | 愚昧学习志</title>
   
 
 
@@ -177,7 +183,7 @@ p{margin:0;}
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-archive">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,263 +287,204 @@ p{margin:0;}
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2018/11/08/counterexamples-in-multivariable-differential/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虞昧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="愚昧学习志">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">多元函数微分学中的反例</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-08T18:53:35+08:00">
+                2018-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 26 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数学分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数学分析</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/23/Desargue-s-Theorem/" itemprop="url">
-              
-                <span itemprop="name">笛沙格定理</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-23T16:41:43+08:00"
-              content="2018-08-23" >
-          08-23
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/21/process-scheduling-algorithms/" itemprop="url">
-              
-                <span itemprop="name">进程调度算法</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-21T14:53:15+08:00"
-              content="2018-08-21" >
-          08-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/20/mathematical-reflections-u453/" itemprop="url">
-              
-                <span itemprop="name">伪装成矩阵的多项式</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-20T10:06:15+08:00"
-              content="2018-08-20" >
-          08-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>&emsp;&emsp;多元函数的连续性和偏导数的存在性、可微性以及连续性之间的关系是：$$偏导数连续\Longrightarrow可微\Longrightarrow\begin{cases}连续\\\\偏导数存在\end{cases},$$其中平行的结论互不蕴涵．<a id="more"></a></p>
+<h1 id="连续但不存在偏导数"><a href="#连续但不存在偏导数" class="headerlink" title="连续但不存在偏导数"></a>连续但不存在偏导数</h1><p>&emsp;&emsp;函数$\,f(x,y)=\sqrt{x^2+y^2}\,$在原点连续但不存在偏导数．</p>
+<h1 id="存在偏导数但不连续（当然也不可微）"><a href="#存在偏导数但不连续（当然也不可微）" class="headerlink" title="存在偏导数但不连续（当然也不可微）"></a>存在偏导数但不连续（当然也不可微）</h1><p>&emsp;&emsp;函数$$f(x,y)=\begin{cases}\dfrac{xy}{x^2+y^2},&amp;x^2+y^2\neq0\\0,&amp;x^2+y^2=0\end{cases}$$在原点不连续但对两个变量的偏导数都存在．</p>
+<h1 id="连续但不可微"><a href="#连续但不可微" class="headerlink" title="连续但不可微"></a>连续但不可微</h1><p>&emsp;&emsp;函数$$f(x,y)=\begin{cases}\dfrac{xy}{\sqrt{x^2+y^2}},&amp;x^2+y^2\neq0\\0,&amp;x^2+y^2=0\end{cases}$$在原点连续但不可微．</p>
+<h1 id="可微但偏导数不连续"><a href="#可微但偏导数不连续" class="headerlink" title="可微但偏导数不连续"></a>可微但偏导数不连续</h1><p>&emsp;&emsp;函数$$f(x,y)=\begin{cases}(x^2+y^2)\sin\dfrac1{\sqrt{x^2+y^2}},&amp;x^2+y^2=1\\0,&amp;x^2+y^2=0\end{cases}$$在原点可微，但是偏导数不连续．</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/19/semaphore-and-P-V-operation/" itemprop="url">
-              
-                <span itemprop="name">信号量和 P、V 操作</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-19T08:48:01+08:00"
-              content="2018-08-19" >
-          08-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/18/coordinate-transformation-in-space/" itemprop="url">
-              
-                <span itemprop="name">空间中的坐标变换</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-18T09:36:23+08:00"
-              content="2018-08-18" >
-          08-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/17/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T16:27:16+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="虞昧 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="虞昧 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/偏导数/" rel="tag"># 偏导数</a>
+          
+            <a href="/tags/反例/" rel="tag"># 反例</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/10/22/mathematical-analysis-exercise-3/" rel="next" title="数分练习[3]">
+                <i class="fa fa-chevron-left"></i> 数分练习[3]
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2018/">1</a><a class="page-number" href="/archives/2018/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -545,6 +492,15 @@ p{margin:0;}
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDA2OC8xNjU5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -565,8 +521,17 @@ p{margin:0;}
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -642,6 +607,22 @@ p{margin:0;}
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#连续但不存在偏导数"><span class="nav-number">1.</span> <span class="nav-text">连续但不存在偏导数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#存在偏导数但不连续（当然也不可微）"><span class="nav-number">2.</span> <span class="nav-text">存在偏导数但不连续（当然也不可微）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#连续但不可微"><span class="nav-number">3.</span> <span class="nav-text">连续但不可微</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可微但偏导数不连续"><span class="nav-number">4.</span> <span class="nav-text">可微但偏导数不连续</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -770,11 +751,15 @@ p{margin:0;}
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -798,6 +783,17 @@ p{margin:0;}
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
