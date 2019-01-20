@@ -64,6 +64,7 @@
 
 
 
+  <meta name="keywords" content="机器学习,支持向量机,线性可分,Mathematica" />
 
 
 
@@ -73,14 +74,22 @@
 
 
 
-<meta name="keywords" content="数学, 编程, 学习笔记, 机器学习, Mathematica">
-<meta property="og:type" content="website">
-<meta property="og:title" content="愚昧学习志">
-<meta property="og:url" content="http://nyuls.com/tags/连续函数/index.html">
+
+<meta name="description" content="&amp;emsp;&amp;emsp;线性可分支持向量机就是要找\[\mathop{\mathrm{argmin}}_{\bm w,b}\dfrac12\|\bm w\|^2,\]其中$\,\bm w\,$和$\,b\,$满足\[y_i(\bm w\cdot\bm x_i+b)-1\geqslant 0,i=1,2,\cdots,N.\]对于这个规划问题，我们可以很快地使用 Mathematica 解决．">
+<meta name="keywords" content="机器学习,支持向量机,线性可分,Mathematica">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性可分支持向量机的求解">
+<meta property="og:url" content="http://nyuls.com/2019/01/20/solution-to-primal-problem-of-linear-separable-SVM/index.html">
 <meta property="og:site_name" content="愚昧学习志">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;线性可分支持向量机就是要找\[\mathop{\mathrm{argmin}}_{\bm w,b}\dfrac12\|\bm w\|^2,\]其中$\,\bm w\,$和$\,b\,$满足\[y_i(\bm w\cdot\bm x_i+b)-1\geqslant 0,i=1,2,\cdots,N.\]对于这个规划问题，我们可以很快地使用 Mathematica 解决．">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.loli.net/2019/01/20/5c43e2217f239.png">
+<meta property="og:image" content="https://i.loli.net/2019/01/20/5c43e2217f96a.png">
+<meta property="og:updated_time" content="2019-01-20T03:02:57.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="愚昧学习志">
+<meta name="twitter:title" content="线性可分支持向量机的求解">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;线性可分支持向量机就是要找\[\mathop{\mathrm{argmin}}_{\bm w,b}\dfrac12\|\bm w\|^2,\]其中$\,\bm w\,$和$\,b\,$满足\[y_i(\bm w\cdot\bm x_i+b)-1\geqslant 0,i=1,2,\cdots,N.\]对于这个规划问题，我们可以很快地使用 Mathematica 解决．">
+<meta name="twitter:image" content="https://i.loli.net/2019/01/20/5c43e2217f239.png">
 
 
 
@@ -140,7 +149,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 
 
-  <link rel="canonical" href="http://nyuls.com/tags/连续函数/"/>
+  <link rel="canonical" href="http://nyuls.com/2019/01/20/solution-to-primal-problem-of-linear-separable-SVM/"/>
 
 
 
@@ -148,7 +157,7 @@ MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
 <style>
 p{margin:0;}
 </style>
-  <title>标签: 连续函数 | 愚昧学习志</title>
+  <title>线性可分支持向量机的求解 | 愚昧学习志</title>
   
 
 
@@ -177,7 +186,7 @@ p{margin:0;}
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -281,54 +290,202 @@ p{margin:0;}
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>连续函数<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://nyuls.com/2019/01/20/solution-to-primal-problem-of-linear-separable-SVM/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="虞昧">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="愚昧学习志">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/24/mathematical-analysis-exercise-1/" itemprop="url">
-              
-                <span itemprop="name">数分练习[1]</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">线性可分支持向量机的求解</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-24T19:08:05+08:00"
-              content="2018-08-24" >
-          08-24
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-20T10:32:16+08:00">
+                2019-01-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&emsp;&emsp;线性可分支持向量机就是要找\[\mathop{\mathrm{argmin}}_{\bm w,b}\dfrac12\|\bm w\|^2,\]其中$\,\bm w\,$和$\,b\,$满足\[y_i(\bm w\cdot\bm x_i+b)-1\geqslant 0,i=1,2,\cdots,N.\]对于这个规划问题，我们可以很快地使用 Mathematica 解决．<a id="more"></a></p>
+<p>&emsp;&emsp;我们以$\,\bm x_i\,$都是平面上的点为例，先随机地生成一些正例和负例：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">正例 = <span class="keyword">Select</span>[<span class="keyword">RandomReal</span>[&#123;-1, 1&#125;, &#123;100, 2&#125;], #.&#123;1, 1&#125; &gt; <span class="number">0.5</span> &amp;];</span><br><span class="line">负例 = <span class="keyword">Select</span>[<span class="keyword">RandomReal</span>[&#123;-1, 1&#125;, &#123;100, 2&#125;], #.&#123;1, 1&#125; &lt; <span class="number">0.2</span> &amp;];</span><br><span class="line"><span class="comment">(*上面的0.5和0.2是为了让正例和负例在视觉上更明显地分开来．*)</span></span><br><span class="line">\[ScriptCapitalX] = <span class="keyword">Join</span>[正例, 负例];</span><br><span class="line">\[ScriptCapitalY] = Association[<span class="keyword">Join</span>[# -&gt; <span class="number">1</span> &amp; /@ 正例, # -&gt; <span class="number">-1</span> &amp; /@ 负例]];</span><br><span class="line">图 = <span class="keyword">ListPlot</span>[&#123;正例, 负例&#125;, <span class="keyword">AspectRatio</span> -&gt; <span class="keyword">Automatic</span>]</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2019/01/20/5c43e2217f239.png" alt="正例和负例"><br>然后就可以直接求解了：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">w = <span class="keyword">NArgMin</span>[&#123;x^2 + y^2, And @@ NonNegative[\[ScriptCapitalY][#] (&#123;x, y&#125;.# + b) - <span class="number">1</span> &amp; /@ \[ScriptCapitalX]]&#125;, &#123;x, y, b&#125;]</span><br></pre></td></tr></table></figure></p>
+<p>注意这里在运行的过程中可能会出现“<code>NArgMin</code> 无法生成任何满足不等式约束条件……”的报错，不用在意，稍等一会儿就会给出结果．最后，我们将这条分隔直线画出来：<br><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Show</span>[图, <span class="keyword">ContourPlot</span>[&#123;x, y, 1&#125;.w == <span class="number">0</span>, &#123;x, -1, 1&#125;, &#123;y, -1, 1&#125;, PlotTheme -&gt; <span class="string">"Classic"</span>]]</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.loli.net/2019/01/20/5c43e2217f96a.png" alt="支持向量机的可视化"></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="虞昧 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="虞昧 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/支持向量机/" rel="tag"># 支持向量机</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/08/counterexamples-in-multivariable-differential/" rel="next" title="多元函数微分学中的反例">
+                <i class="fa fa-chevron-left"></i> 多元函数微分学中的反例
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -336,6 +493,15 @@ p{margin:0;}
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDA2OC8xNjU5NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -561,11 +727,15 @@ p{margin:0;}
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
@@ -589,6 +759,17 @@ p{margin:0;}
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
